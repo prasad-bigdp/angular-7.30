@@ -1,0 +1,16 @@
+.main
+{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.dark
+{
+    background-color: black;
+    color: white;
+}
+.light
+{
+    background-color: white;
+    color: black;
+}

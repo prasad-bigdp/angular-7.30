@@ -1,0 +1,8 @@
+<!-- <div  [class.dark]="isDark" [class.main]="isMain"> -->
+  <div [ngClass]="{'dark':isDark}">
+  <p [ngStyle]="{'text-transform':prasad,'color':something?myColor:noColor}">{{name}}</p>
+  <img [src]="imgUrl" alt="">
+  <button (click)="myMethod()">click me</button>
+  <input type="text" (input)="inputChange($event)">
+  {{inp}}
+</div>
