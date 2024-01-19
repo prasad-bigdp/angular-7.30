@@ -1,0 +1,9 @@
+<div [className]="isCenter?'center':''">
+  <h1>Hello {{name}}</h1>
+  <button [disabled]="isdisabled">click me</button>
+  <input type="text" (change)="inp($event)">
+  <input type="text" [(ngModel)]="na">
+  <p>Hello, {{na}}</p>
+  <p>Input is :{{input}}</p>
+  <app-header></app-header>
+</div>

@@ -1,0 +1,26 @@
+
+body
+{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.counter
+{
+    height: 200px;
+    width: 200px;
+  box-shadow: 5px 5px 5px black;
+}
+.counterDiv p
+{
+ font-size: 36px;
+}
+.counterDiv button
+{
+    background-color: black;
+    color: aliceblue;
+    margin: 10px;
+    border-radius: 10px;
+
+}

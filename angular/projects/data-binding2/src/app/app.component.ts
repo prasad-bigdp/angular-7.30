@@ -26,7 +26,8 @@ export class AppComponent {
       this.isDark = true
     }
   }
-  inputChange(e:Event) {
+  inputChange(e: Event) {
+    console.log(e)
     this.inp = (e.target as HTMLInputElement).value;
     console.log(this.inp)
   }
