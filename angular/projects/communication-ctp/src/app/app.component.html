@@ -1,0 +1,7 @@
+<div style="border: 1px solid black;height: 300px;width: 300px;">
+  <!-- how do you access DOM elements in angular , template reference variables -->
+  <h1 #chitti>I'm App Component</h1>
+  <app-child (myEvent)="fun2($event)" #mychild></app-child>
+  {{mychild.count}}
+  <button (click)="mychild.counter()">click parent</button>
+</div>
