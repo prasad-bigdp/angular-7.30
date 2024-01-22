@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import {ChildComponent} from './child/child.component'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'communication-ctp';
-  msg = ''
-  met(name:string) {
-    console.log(name)
+  @ViewChild(ChildComponent) child!: ChildComponent;
+  @ViewChildren(ChildComponent) children!:QueryList<ChildComponent>
+  message!: string;
+
+  parentFun(m: string) {
+    this.message = m;
   }
-  fun2(m:any)
+  parentFun2()
   {
-    this.msg = m;    
+    this.child.incr()
+    console.log(this.children)
+    console.log(this.child.count)
   }
 }
