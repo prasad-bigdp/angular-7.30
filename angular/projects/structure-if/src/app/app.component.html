@@ -4,11 +4,30 @@
   <ng-template #afterloginmessage>Hello Admin! </ng-template>
   <ng-template #loginMessage >Please Login....</ng-template>
   simple if -->
-  <button (click)="show=!show">{{show?'hide':'show'}}</button>
+  <!-- <button (click)="show=!show">{{show?'hide':'show'}}</button>
   <ng-template *ngIf="show then show1 else show2">
   something............
   </ng-template>
   <ng-template #show1>This is the show</ng-template>
-    <ng-template #show2>Nothing to show</ng-template>
+    <ng-template #show2>Nothing to show</ng-template> -->
 
+    <!--ngSwitch-->
+<!-- <div [ngSwitch]="x">
+    <div *ngSwitchCase="3">
+      <div [ngSwitch]="day">
+        <div *ngSwitchCase="0">Sunday</div>
+        <div *ngSwitchCase="1">Monday</div>
+        <div *ngSwitchCase="2">Tuesday</div>
+        <div *ngSwitchCase="3">Wednesday</div>
+        <div *ngSwitchDefault>Some other day</div>
+      </div>
+    </div>
+    <div *ngSwitchCase="4">My value is 4</div>
+    <div *ngSwitchDefault>This is Default</div>
+</div> -->
+
+<!--ngFor-->
+<div *ngFor="let item of items;let i=index;let o=odd;let e=even">
+  This is 6 times of item :{{item*6}} and index is {{i}} {{o}} {{e}}
+</div>
 </div>

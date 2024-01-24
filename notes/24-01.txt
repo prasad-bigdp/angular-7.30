@@ -1,0 +1,112 @@
+========================
+Directives
+========================
+Directives are used to manipulate the DOM Dynamically(add/remove elements in DOM Dynamically)
+Directives are three types
+1. Structural Directives
+2. Property Directives
+3.Custom Directive
+
+1. Structural Directives:
+--------------------------------
+Structural Directives manipulate the Dom Elements using a condition and Decision based on it.
+There are three Structural Directives
+1.ngIf
+ngIf simply Helps a view to be controlled based on a condition
+//component.ts
+showDiv:false
+//component.html
+<div *ngIf="showDiv">Hiiii</div>
+
+IfElse:
+ <!-- <div class="myclass" *ngIf="isLogin as value;else loginMessage">{{value}}</div>
+  <ng-template #afterloginmessage>Hello Admin! </ng-template>
+  <ng-template #loginMessage >Please Login....</ng-template>
+  simple if -->
+  <button (click)="show=!show">{{show?'hide':'show'}}</button>
+  <ng-template *ngIf="show then show1 else show2">
+  something............
+  </ng-template>
+  <ng-template #show1>This is the show</ng-template>
+    <ng-template #show2 >Nothing to show</ng-template>
+
+ngSwitch:
+ngSwitch bring switch cases structure in template files. switch cases works based on a expression and display the particular case on the view
+
+Basic Example:
+//component.html
+<div [ngSwitch]="x">
+    <div *ngSwitchCase="3">My value is 3</div>
+    <div *ngSwitchCase="4">My value is 4</div>
+    <div *ngSwitchDefault>This is Default</div>
+</div>
+//component.ts
+x=3;
+
+[ngSwitch] --> binds the variable from the component
+*ngSwitchCase-->it represents each case for evaluating expression
+*ngSwitchDefault --> it represents default case which displayed only when none of the ngSwitchCases matches and it is optional
+nestedSwitch:switch statement inside another switch Statement
+//component.html
+<div [ngSwitch]="x">
+    <div *ngSwitchCase="3">
+      <div [ngSwitch]="day">
+        <div *ngSwitchCase="0">Sunday</div>
+        <div *ngSwitchCase="1">Monday</div>
+        <div *ngSwitchCase="2">Tuesday</div>
+        <div *ngSwitchCase="3">Wednesday</div>
+        <div *ngSwitchDefault>Some other day</div>
+      </div>
+    </div>
+    <div *ngSwitchCase="4">My value is 4</div>
+    <div *ngSwitchDefault>This is Default</div>
+</div>
+</div>
+//component.ts
+export class AppComponent {
+  show = false;
+  x = 3;
+  day=0
+  constructor() {
+    enum Days {
+      sunday,
+      monday,
+      tuesday,
+      wednesday,
+      thursday,
+      friday,
+      saturday
+    }
+    this.day=Days.thursday
+  }
+}
+=========
+ngFor
+=========
+it renders the template for each item in a collection (Usually arrays/lists)
+//component.html
+<div *ngFor="let item of items;let i=index;let o=odd;let e=even">
+  This is 6 times of item :{{item*6}} and index is {{i}} {{o}} {{e}}
+</div>
+//component.ts
+ items=[2,5,6,4,8,7]
+you can iterate objects also and you can also do nested for
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
