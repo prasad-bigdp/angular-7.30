@@ -1,0 +1,75 @@
+ngFor
+------------
+*ngFor is used to iterate the DOm elements Dynamically
+<div>
+  <h1>Main Component</h1>
+  <div *ngFor="let i of items;let in =index">
+     element is {{i}} and index is {{in}}
+  </div>
+</div>
+//component.ts
+items=[5,6,8,7];
+
+iterating an Object:
+//html
+  <div *ngFor="let keyValuePair of obj|keyvalue"><!--pipes-->
+      {{keyValuePair.key}}:{{keyValuePair.value}}
+  </div>
+//ts
+obj = {
+    name:"raj",
+    age: 25,
+    salary:525252
+  }
+
+TrackBy:
+ TrackBy clause is optional and it is used to improve the performance by providing hint to angular on how to track changes in the list. it helps to associate each item with unique value
+//component.html
+<div class="main">
+    <div *ngFor="let i of items;let in =index;trackBy:fun">
+      element is {{i}} and index is {{in}}
+    </div>
+  </div>
+//component.ts
+interface Item {
+  id: number;
+  name: string;
+}
+items: Item[] = [
+    { id: 1, name: 'items 1' },
+    { id: 2, name: 'item 2' },
+    { id: 3, name: 'item 3' },
+    { id: 4, name: 'item 3' },
+  ];
+  fun(index: number, item: Item): number {
+    return item.id;
+  }
+
+nested For:
+for inside another for
+<div class="main">
+    <div *ngFor="let i of items;let in =index;trackBy:fun">
+      <div *ngFor="let i of items|keyvalue">
+         {{i.value}}
+      </div>
+    </div>
+  </div>
+
+Property Directives:
+ngClass  dynamically updates the classes based on value received from component and ngStyle also dynamically updates the styles based on values received from components
+  <div [ngClass]="{'main':m,'good':g}" [ngStyle]="{'color':x,'backgroundColor':y}">
+</div>
+
+Custom Directives:
+these are directives created by users
+
+
+
+
+
+
+
+
+
+
+

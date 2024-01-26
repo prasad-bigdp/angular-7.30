@@ -1,0 +1,18 @@
+<div>
+  <h1>Main Component</h1>
+  <div [ngClass]="{'main':m,'good':g}" [ngStyle]="{'color':x,'backgroundColor':y}"> 
+    <div *ngFor="let i of items;let in =index;trackBy:fun">
+      <div *ngFor="let i of items|keyvalue">
+         {{i.value}}
+      </div>
+    </div>
+  </div>
+  <div appMydir>
+    I'm using custom directive
+  </div>
+
+  <div appMydir *ngFor="let keyValuePair of obj|keyvalue"><!--pipes-->
+    {{keyValuePair.key}}:{{keyValuePair.value}}
+  </div>
+
+</div>
