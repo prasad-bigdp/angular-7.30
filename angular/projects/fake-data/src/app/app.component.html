@@ -1,0 +1,14 @@
+<app-header [count]="c"></app-header>
+<div class="main">
+  <h1>Products Market</h1>
+  <div id="products">
+      <div id="product" *ngFor="let i of data">
+       <img src={{i.image}} alt={{i.title}} class="prodImage">
+       <h2>{{i.title}}</h2>
+       <p>Price : {{i.price |currency:"INR"}}</p>
+       <button (click)="add()">Add to cart</button>
+
+      </div>
+  </div>
+</div>
+<app-footer></app-footer>

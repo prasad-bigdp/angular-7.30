@@ -1,0 +1,32 @@
+Pipes:
+pipes are represented with Pipe symbol ( | ), In angular , Pipes are used to transform data before displaying it in the template. They are a way to format,filter and manipulate Data easily .
+There are two types
+1.Built-in:
+  These are default /predefined pipes existed in the angular.
+
+  Lowercase/uppercase:
+  These pipes are used to convert element text into lowercase or uppercase respectively
+  eg:   <p>my name is {{name | uppercase |lowercase}}</p>
+
+  DatePipe: it is used to format the dates
+  Date pipe is used to get dates in our desired formmat/timezone
+    <p>Date: {{dt | date:"dd/MM/yy"}}</p>
+   currency:
+   Decimal:
+   percent:
+   json:
+   slice:
+   async: we will use this for obsservables /promises:
+    <h1>App component</h1>
+  <p>my name is {{name | uppercase |lowercase}}</p>
+  <p>Date: {{dt | date:"dd/MM/yy"}}</p>
+  <p>Price:{{price | currency:'INR':true}}</p>
+  <p>{{no | number:'1.2-2'}}</p>
+  <p>{{0.75|percent}}</p>
+  <!-- <p>{{data | json}}</p> -->
+  <p>{{str | slice:0:9}}</p>
+
+
+2.Custom Pipes: we can create our own pipes which have pipe transform method
+
+ng generate pipe pipe-name

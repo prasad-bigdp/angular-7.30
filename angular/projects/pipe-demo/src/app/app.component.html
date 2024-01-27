@@ -1,0 +1,16 @@
+<div>
+  <h1>App component</h1>
+  <p>my name is {{name | uppercase |lowercase}}</p>
+  <p>Date: {{dt | date:"dd/MM/yy"}}</p>
+  <p>Price:{{price | currency:'INR':true}}</p>
+  <p>{{no | number:'1.2-2'}}</p>
+  <!--minimum integer digits.minimum decimal digits- maximum decimal digits
+  55.375
+  -->
+  <p>{{0.75|percent}}</p>
+  <!-- <p>{{data | json}}</p> -->
+  <p>{{str | slice:0:9}}</p>
+  <p>{{ name| prasad:"hi"}}</p>
+  <p>{{{'key':'ghfghf'}|json}}</p>
+  <p>{{value |evenOdd:false}}</p>
+</div>

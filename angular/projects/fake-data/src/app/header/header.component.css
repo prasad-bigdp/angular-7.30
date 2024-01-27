@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+header img
+{
+    height: 50px;
+    width: 100px;
+}
