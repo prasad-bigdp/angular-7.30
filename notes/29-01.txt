@@ -1,0 +1,19 @@
+Till now We covered:
+Components,
+data binding(one Way and Two Way)
+Communication between the components(parent to child,child to parent)
+Directives
+Pipes
+Forms in Angular: In angular forms are dealt in two way
+Template Driven Forms(static forms):
+  Template Driven forms are built using directives and these are two way data binding with " ngModel ".
+  step 1: import FormsModule in app.module.ts
+  step 2:
+    create a form in template and give each input ngModel to enable two way data binding. and assign whole form to the ngForm with one reference variable name
+  step3:
+  on submit check the form for validations
+
+  validations:
+  
+
+Reactive Forms(dynamic forms)
