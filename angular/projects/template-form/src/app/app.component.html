@@ -1,19 +1,23 @@
 <div>
   <h1>Main Component</h1>
   <h2>Template Form:</h2>
-  <form #myForm="ngForm"  (ngSubmit)="submit(myForm)">
-    <label for="na">Name:</label>
-    <input type="text" id="na" name="name" [(ngModel)]="form.name" required><br><br>
-    
-    <label for="em">Email:</label>
-    <input type="email" id="em" name="email" [(ngModel)]="form.email" required><br><br>
-    <label for="pwd">Password:</label>
-    <input type="password" id="pwd" name="password" [(ngModel)]="form.password" required><br><br>
-    <button type="submit">Submit</button>
-  </form>
+    <form action="" #myForm="ngForm">
+     <input type="text" ngModel name="name" #n="ngModel" placeholder="Enter the name" minlength="4" required>
+       <p *ngIf="myForm.form.controls?.['name']?.['touched'] && n.errors?.['required']" class="err-msg">The input value is required</p>
+       <p class="err-msg" *ngIf="n.touched && n.errors?.['minlength']">The minimum length is 4 characters</p>
+       <br>
+
+
+     <input type="email" ngModel name="email" #e="ngModel" placeholder="Enter the email" required pattern="/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$/"> <br>
+     <p *ngIf="e.touched && e.errors?.['pattern']">Please Enter valid Email</p>
+     <p *ngIf="e.touched && e.errors?.['required']">Email is Required</p>
+     <br>
+     <input type="password" ngModel name="password" #p="ngModel" placeholder="Enter the Password"><br><br>
+      <button (click)="submit(n,p,e,myForm)">Submit</button>
+    </form>
 </div>
 <div id="display" style=" height: 200px;width: 200px; border: 1px solid black;">
-  <p>Name:{{form.name}}</p> 
-  <p>Email:{{form.email}}</p> 
-  <p>Password:{{form.password}}</p> 
+  <p>Name:{{n.control.value}}</p> 
+  <p>Email:{{e.control.value}}</p> 
+  <p>Password:{{p.control.value}}</p> 
 </div>

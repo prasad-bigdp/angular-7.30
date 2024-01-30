@@ -7,11 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'templateForm';
-  form: any = {};
-  submit(d:any)
+ 
+  submit(a:any,b:any,c:any,d:any)
   {
-    console.log("form is Submitted")
-    console.log(this.form)
-    console.log(d)
+    console.log(a,b,c,d)
   }
 }
