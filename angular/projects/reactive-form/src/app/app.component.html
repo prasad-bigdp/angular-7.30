@@ -1,0 +1,10 @@
+<div>
+  <h1>Reactive Form</h1>
+  <form action="" [formGroup]="myForm">
+    <input type="text" id="un" placeholder="Enter the name" formControlName="username"><br><br>
+    <p *ngIf="myForm.controls['username'].hasError('required')">The email is required</p>
+    <input type="email" placeholder="Enter the Email" id="en" formControlName="email">
+    <input type="password" placeholder="Enter the password" id="pwd" formControlName="password">
+    <button>Submit</button>
+  </form>
+</div>

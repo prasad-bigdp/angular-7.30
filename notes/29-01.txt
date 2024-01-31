@@ -13,7 +13,7 @@ Template Driven Forms(static forms):
   step3:
   on submit check the form for validations
 
-  validations:
-  
+
+
 
 Reactive Forms(dynamic forms)

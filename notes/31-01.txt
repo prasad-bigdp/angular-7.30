@@ -1,0 +1,11 @@
+Probelms with template Driven Forms:
+
+static input values
+No custom validations
+
+Reactive Forms:
+Reactive are also called component/model-driven forms.
+1. creating Reactive forms in angular involves ReactiveFormsModule and the FormBuilder service . Reactive forms are model-driven.
+import ReactiveFormsModule Module
+2. Create a Form Model:
+in ts file we will define a model to represent the structure of form data

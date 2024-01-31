@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'templateForm';
  
-  submit(a:any,b:any,c:any,d:any)
+  submit(a:any)
   {
-    console.log(a,b,c,d)
+    console.log(a.value.name)
   }
 }

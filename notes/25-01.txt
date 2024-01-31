@@ -62,6 +62,26 @@ ngClass  dynamically updates the classes based on value received from component 
 
 Custom Directives:
 these are directives created by users
+command: ng generate directive directivename
+
+//mydir.directive.ts
+import { Directive, Renderer2 } from '@angular/core';
+import { ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appMydir]',
+})
+export class MydirDirective {
+  constructor(el: ElementRef, rn: Renderer2) {
+    console.log(el)
+    rn.setStyle(el.nativeElement, 'backgroundColor', 'blue');
+  }
+}
+//app.component.html
+<div appMydir>
+content
+</div>
+
 
 
 

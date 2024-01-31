@@ -1,0 +1,16 @@
+Forms in Angular:
+Template Driven Forms:These forms are implemented and validated using html/template file
+Reactive Forms: these forms are used to generate dynamic input field. these forms are implemented using ts/model/component files
+
+Template Driven Forms:
+  Each Input field have to give "ngModel" Directive to create FormControl instance(name is mandatory)
+  Whole form uses "ngForm" directive to create FormGroup Instance.
+
+  They provide some Basic Validators/FormControl Proprties:
+  value: what is current value it is holding
+  valid/invalid: these boolean values will be valid-true if the control has passed all validators
+  pristine:true if the user has not yet changed the value in the User Input.then dirty will be false
+  touched: will be true when user input has been touched,then untouched will be false
+  Errors: erros is an object contains validations as key value pair
+
+  
