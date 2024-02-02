@@ -1,0 +1,27 @@
+Custom Validations:
+let's create a custom validator for Password Matching
+import {  FormGroup, ValidatorFn } from "@angular/forms";
+export function passwordValidators(){
+   
+    return (control: FormGroup): { [ key: string ]: boolean } |boolean => {
+        const password = control.get('password');
+        const confirm_Password = control.get('confirmPassword')
+        if (!password || !confirm_Password || password.value === confirm_Password.value) {
+            return true;
+        }
+        return { passwordMatch: false }
+    };
+}
+ import it into component file and use it in FormGroup
+ password: [ "value",[Validators.default validator,custom validator],Asynchronous validators ]
+
+
+
+Asynchronous Validators are used whwn you need to perform validators that involve asynchronous function like HTTPClient request. These validators will return an observable/promise
+
+
+
+
+
+
+

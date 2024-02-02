@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, AbstractControl, ValidatorFn, Validators } from '@angular/forms';
+import { passwordValidators } from './password-validator';
 
 interface FormModel{
   username: string,
@@ -14,12 +15,14 @@ interface FormModel{
 export class AppComponent {
   title = 'reactiveForm';
   myForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder) /*Dependency Injection as a framework*/{
     this.myForm = this.fb.group({
-      username: [ '', [ Validators.required, Validators.minLength(3) ] ],
-     
+      username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      passwords: this.fb.group({
+        password: [ '', [ Validators.required, Validators.minLength(6) ] ],
+        confirmPassword:["",[Validators.required,{Validator:passwordValidators()}]]
+      }),
     });
   }
   submit() {
