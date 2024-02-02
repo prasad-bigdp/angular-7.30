@@ -1,0 +1,42 @@
+Services:
+Services allows you to organize  and share data/code across different parts of the application. these are used to encapsulate reusable,data share b/w components.
+
+Singleton Pattern:
+by default there is only one instance of a service. all components share same instance. we inject the instance into components
+@injectable decorator  to allow to inject service dependencies
+Dependency Injection:
+
+Angular uses a hieerarchial injector system to provide services to components. it means that a service provided higher level is available to all
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ItemService {
+  private items: string[] = [];
+
+  addItems(i: string) {
+    this.items.push(i)
+  }
+  getitems() {
+    return this.items
+  }
+  clearItems()
+  {
+    this.items=[]
+  }
+
+}
+
+HttpClient:
+HttpClient is module for making HttpRequests. 
+
+1:import HTtpClientModule in Module.ts
+2.Inject HttpClient into a service
+
+We will create the instance of service in constructor parameter
+
+Services are commonly used for Http Requests.
+
+
