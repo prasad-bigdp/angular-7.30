@@ -1,0 +1,14 @@
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+header img
+{
+    height: 100px;
+    width: 100px;
+
+}

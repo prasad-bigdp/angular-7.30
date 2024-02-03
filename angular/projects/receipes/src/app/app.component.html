@@ -1,0 +1,14 @@
+<app-header [cart]="count"></app-header>
+<div class="main">
+  <div><h1 style="text-align: center;">Receipes</h1>
+  <input type="text" [(ngModel)]="searchTerm"><button (click)="search()">🔍</button></div>
+ 
+   <ul class="receipes">
+    <li *ngFor="let i of receipes" class="receipe">
+      <img src={{i.image}} alt={{i.name}} height="100" width="100">
+      <h2>{{i.name}}</h2>
+      <button (click)="add()">Add to cart</button>
+    </li>
+   </ul>
+</div>
+<app-footer></app-footer>
