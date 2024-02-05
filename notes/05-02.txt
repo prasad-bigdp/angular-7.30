@@ -1,0 +1,9 @@
+CRUD : create,read,update and Delete
+
+Create an API using json-server 
+and update db.json with data
+
+create a service and implement, post,put and delete operations.
+npm install -g json-server
+create a file named db.json
+json-serve db.json --watch

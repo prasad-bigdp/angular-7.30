@@ -1,0 +1,14 @@
+<div>
+  <h1>Main CRUD App
+  </h1>
+  <ul class="receipes">
+@for(r of receipes;track r.id){
+<li class="receipe">
+  <img src={{r.image}} alt={{r.name}} height="100" width="100">
+  <h2>{{r.name}}</h2>
+  <button (click)="delete(r.id)">❎</button>
+</li>
+}
+  </ul>
+
+</div>

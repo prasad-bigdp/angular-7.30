@@ -1,0 +1,16 @@
+.receipes
+{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  gap: 20px;
+}
+.receipe
+{
+    list-style-type: none;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
