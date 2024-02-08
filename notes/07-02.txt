@@ -1,0 +1,20 @@
+last day of this angular course is next wednesday,
+from friday we will do project,rxjs
+Routing,life cycle methods
+
+Life-Cycle Methods:
+Every component will go through a phase of life. These are the key moments of component like when component is initialized,rendered,destroyed
+
+Order:
+ngOnChanges:
+  it will get triggered when @input() values got changed
+ngOnInit
+ngDoCheck
+ngAfterContentInit
+ngAfterContentCheck
+ngAfterViewInit
+ngAfterViewCheck
+ngAfterContentCheck
+ngDestroy
+
+

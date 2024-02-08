@@ -1,0 +1,9 @@
+<div *ngIf="toggle">
+  <app-header [val]="value"></app-header>
+</div>
+<div>
+  <h1>Main Component</h1>
+  <input type="text" [(ngModel)]="value">
+  <button (click)="fun()">click me</button>
+</div>
+<!--AOT(Ahead of Time) and JIT(Just In Time)-->

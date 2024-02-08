@@ -7,3 +7,5 @@ create a service and implement, post,put and delete operations.
 npm install -g json-server
 create a file named db.json
 json-serve db.json --watch
+
+created a service in angular application and i did get,delete

@@ -5,7 +5,8 @@
 @for(r of receipes;track r.id){
 <li class="receipe">
   <img src={{r.image}} alt={{r.name}} height="100" width="100">
-  <h2>{{r.name}}</h2>
+  <input type="text" value={{r.name}} [readOnly]="input" [(ngModel)]="title">
+  <button (click)="update(r.id)">✏️</button>
   <button (click)="delete(r.id)">❎</button>
 </li>
 }

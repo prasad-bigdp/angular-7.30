@@ -1,0 +1,4 @@
+Routing: Routing in angular refers to the mechanism that allows you to navigate between different component and views based on URL
+We implement SPA
+
+step1:  Define Routing Parameters/URL's

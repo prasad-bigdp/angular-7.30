@@ -17,4 +17,10 @@ export class CrudService {
   {
     return this.hc.delete(`http://localhost:3000/receipes/${id}`);
   }
+  updt(id:number,title:string)
+  {
+    return this.hc.put(`http://localhost:3000/receipes/${id}`, {
+    name:title
+  });
+  }
 }
