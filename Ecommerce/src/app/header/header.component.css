@@ -1,0 +1,30 @@
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+ul
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+li
+{
+    font-size: 20px;
+    padding: 10px;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 10px;
+}
+li:hover{
+    background-color: grey;
+    color: white;
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}

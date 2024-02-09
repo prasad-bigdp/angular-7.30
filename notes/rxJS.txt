@@ -1,0 +1,3 @@
+rxJS is state management library
+1.Observables
+These are like promises only but multiple promise. promise means one async fn but observables are multiple asynchronous functions

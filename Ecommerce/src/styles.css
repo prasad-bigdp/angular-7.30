@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css');
+@import url('../node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
+@import url('../node_modules/@fortawesome/fontawesome-free/css/brands.min.css');
+@import url('../node_modules/@fortawesome/fontawesome-free/css/regular.min.css');
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+:root
+{
+    --primary:#114969;
+    --secondary:#000;
+    --white:#fff;
+}
+button
+{
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: var(--primary);
+    color: black;
+}

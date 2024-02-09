@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+#products
+{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 15px;
+    padding: 1rem 5rem;
+}
+.product
+{
+    box-shadow: 5px 8px 8px var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.product:hover
+{
+     box-shadow: 5px 8px 8px var(--primary);
+
+}
