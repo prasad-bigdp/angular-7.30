@@ -2,8 +2,8 @@
 <div id="products" class="">
     <div *ngFor="let p of products" class="product">
         <img src={{p.thumbnail}} alt={{p.title}} height="150" width="150">
-        <h3>{{p.title}}</h3>
+       <a routerLink="./product/{{p.id}}"><h3>{{p.title}}</h3></a> 
         <p>{{p.price}}</p>
-        <button (click)="add()">Add to cart</button>
+        <button (click)="add(p)">Add to cart</button>
     </div>
 </div>

@@ -11,6 +11,7 @@ import { AdminModule } from './admin/admin.module';
 import { FooterComponent } from './footer/footer.component';
 import { FakeProductsService } from './fake-products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     ProductComponent,
     FooterComponent,
+    CartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, AdminModule, HttpClientModule],
   providers: [FakeProductsService],

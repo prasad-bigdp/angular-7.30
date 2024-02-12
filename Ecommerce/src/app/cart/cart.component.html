@@ -1,0 +1,5 @@
+<h2>Cart</h2>
+<div *ngFor="let i of items;let in=index">
+<p>{{i.title}} {{i.price}}  <button (click)="remove(in)">❎</button></p>
+</div>
+<button>Checkout</button>

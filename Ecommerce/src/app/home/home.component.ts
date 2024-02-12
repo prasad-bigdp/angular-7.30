@@ -7,7 +7,6 @@ import { FakeProductsService } from '../fake-products.service';
 })
 export class HomeComponent implements OnInit {
   products: any;
-  @Output() cartAdd = new EventEmitter<void>()
   constructor(private fs: FakeProductsService)
   {
 
@@ -16,8 +15,8 @@ export class HomeComponent implements OnInit {
   {
     this.fs.getData().subscribe((data)=>this.products=data.products)
   }
-  add()
+  add(item:any)
   {
-      this.cartAdd.emit()
+      this.fs.add(item)
   }
 }

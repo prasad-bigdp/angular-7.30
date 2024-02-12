@@ -1,1 +1,5 @@
-<p>product works!</p>
+<div *ngIf="item">
+    <img src={{item.thumbnail}} alt={{item.title}} height="300" width="300">
+    <p>{{item.title}}</p>
+    <p>{{item.price}}</p>
+</div>

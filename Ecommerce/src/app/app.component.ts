@@ -7,13 +7,5 @@ import { FakeProductsService } from './fake-products.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  c:any
-  constructor(private fs:FakeProductsService)
-  {
-
-  }
-  add()
-  {
-     this.c= this.fs.add()
-  }
+ 
 }
