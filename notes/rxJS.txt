@@ -1,3 +1,7 @@
 rxJS is state management library
 1.Observables
 These are like promises only but multiple promise. promise means one async fn but observables are multiple asynchronous functions
+2.Subjects:
+Asynchronous event which are executed sequentially
+eg:10 people birthday wishes 
+3.operators:these are functions used for subjects or observables like subscripe,of etc..,
